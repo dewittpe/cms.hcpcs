@@ -14,5 +14,6 @@ Depends:
    R (>= 3.5.0)
 Imports:
 Suggests:
+  knitr
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
