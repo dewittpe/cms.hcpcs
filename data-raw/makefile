@@ -1,4 +1,7 @@
-all: ../data/hcpcs_2019.rda
+all: ../data/HCPCS_2019.rda ../data/BETOS_TB.rda
 
-../data/hcpcs_2019.rda : import.R
+../data/HCPCS_2019.rda : import.R
+	R CMD BATCH --vanilla $<
+
+../data/BETOS_TB.rda : BETOS_TB.R
 	R CMD BATCH --vanilla $<
