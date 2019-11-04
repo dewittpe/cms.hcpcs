@@ -3,7 +3,7 @@
 tmpdir <- tempdir()
 unzip("2019-HCPCS-Record-Layout.zip", exdir = tmpdir)
 
-list.files(tmpdir)
+list.files(tmpdir, full.name = TRUE)
 
 BETOS_TB <- data.table::fread(file = paste0(tmpdir, "/HCPCS2019_recordlayout.txt"),
                               strip.white = FALSE,
