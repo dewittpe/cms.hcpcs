@@ -27,3 +27,8 @@
 #'
 #' @source documentation for the record layout of HCPCS 2019 record layout file.
 "CMS_TYPE_SRVC_TB"
+
+#' HCPCS (Including CPT)
+#'
+#' @source correctcodechek.decisionhealth.com
+"HCPCS_2019_Q4"

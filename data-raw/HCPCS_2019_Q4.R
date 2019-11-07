@@ -46,9 +46,9 @@ get_codes <- function(url) {
 
 all_codes <- lapply(urls, function(x) {rbindlist(lapply(x, get_codes))})
 
-HCPCS <- as.data.frame(rbindlist(all_codes, idcol = "GROUP"), stringsAsFactors = FALSE)
-HCPCS$YEAR <- 2019L
-HCPCS$QRT  <- 4L
+HCPCS_2019_Q4 <- as.data.frame(rbindlist(all_codes, idcol = "GROUP"), stringsAsFactors = FALSE)
+HCPCS_2019_Q4$YEAR <- 2019L
+HCPCS_2019_Q4$QRT  <- 4L
 
-save(HCPCS, file = "../data/HCPCS_CODES.rda")
+save(HCPCS_2019_Q4, file = "../data/HCPCS_2019_Q4.rda")
 
