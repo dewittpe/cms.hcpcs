@@ -1,4 +1,4 @@
-all: ../data/HCPCS_2019.rda ../data/BETOS_TB.rda ../data/CMS_TYPE_SRVC_TB.rda
+all: ../data/HCPCS_2019.rda ../data/BETOS_TB.rda ../data/CMS_TYPE_SRVC_TB.rda ../data/HCPCS_2019_Q4.rda
 
 ../data/HCPCS_2019.rda : import.R
 	R CMD BATCH --vanilla $<
@@ -7,4 +7,7 @@ all: ../data/HCPCS_2019.rda ../data/BETOS_TB.rda ../data/CMS_TYPE_SRVC_TB.rda
 	R CMD BATCH --vanilla $<
 
 ../data/CMS_TYPE_SRVC_TB.rda : CMS_TYPE_SRVC_TB.R
+	R CMD BATCH --vanilla $<
+
+../data/HCPCS_2019_Q4.rda : HCPCS_2019_Q4.R
 	R CMD BATCH --vanilla $<
